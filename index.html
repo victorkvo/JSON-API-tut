@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 4 Day 3</title>
+  </head>
+
+  <body>
+    <p></p>
+    <h1>Updating a Resource</h1>
+
+    <p>
+      A resource can be updated by sending a PATCH request to the URL that
+      represents the resource.
+      <br />
+      The URL for a resource can be obtained in the self link of the resource
+      object.
+      <br />
+      Alternatively, when a GET request returns a single resource object as
+      primary data, the same request URL can be used for updates.
+      <br />
+      The PATCH request MUST include a single resource object as primary data.
+      The resource object MUST contain type and id members.
+    </p>
+    <img src="patch2.PNG" alt="example" style="width: 300px; height: 300px" />
+    <br />
+    In this example, the article 1 is being updated.
+    <br /><br /><br />
+    <h1>Updating a Resource’s Attributes</h1>
+    <p>
+      Any or all of a resource’s attribute may be changed in a PATCH request.
+      <br />
+      Note: Any missing attributes will remain unchanged. The server MUST NOT
+      have their values changed to null.
+    </p>
+    <img src="patch 3.PNG" alt="example" style="width: 600px; height: 300px" />
+    <br />
+    In this example, the “title” and “text attributes are being updated.
+    <br /><br /><br />
+    <h1>Updating a Resource’s Relationships</h1>
+    <p>
+      Similar to attributes, a Resource’s relationship may also be changed using
+      a PATCH request.
+      <br />
+      Note: Any missing relationships will remain unchanged. The server MUST NOT
+      have their values changed to null.
+    </p>
+    <img src="patch 4.PNG" alt="example" style="width: 600px; height: 300px" />
+    <br />
+    In this example, the “author” relationship is being updated.
+    <br />
+  </body>
+</html>
